@@ -34,6 +34,8 @@ int main()
 			++it;
 		}
 		std::stack<int> s(mstack);
+		MutantStack<int> dest;
+		dest = mstack;
 
 	}
 

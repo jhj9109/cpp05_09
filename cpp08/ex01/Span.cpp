@@ -72,3 +72,6 @@ unsigned int Span::longestSpan() const {
     }
     return static_cast<unsigned int>(static_cast<long>(*_c.rbegin()) - static_cast<long>(*_c.begin()));
 }
+
+const char *Span::SizeLimitException::what() const throw() { return "사이즈 초과"; }
+const char *Span::TooShortException::what() const throw() { return "사이즈 1이하"; }

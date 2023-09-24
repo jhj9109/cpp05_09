@@ -27,13 +27,13 @@ public:
     class SizeLimitException : public std::exception
     {
     public:
-        virtual const char *what() const throw() { return "사이즈 초과"; };
+        virtual const char *what() const throw();
     };
 
     class TooShortException : public std::exception
     {
     public:
-        virtual const char *what() const throw() { return "사이즈 1이하"; };
+        virtual const char *what() const throw();
     };
 };
 

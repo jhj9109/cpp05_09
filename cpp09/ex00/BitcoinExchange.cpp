@@ -34,9 +34,10 @@ BitcoinExchange::BitcoinExchange(const std::string &filename)
 
 void BitcoinExchange::readCsv(const std::string &filename)
 {
+    const std::string csvExt(".csv");
     _c.clear();
     // 1. .csv 파일 검색
-    if (!checkExtension(".csv", filename))
+    if (!checkExtension(csvExt, filename))
     {
         throw InvalidExtentionException();
     }
@@ -57,7 +58,7 @@ void BitcoinExchange::readCsv(const std::string &filename)
     }
 
     // 4. 헤더 체크
-    std::string header_format("date,exchange_rate");
+    const std::string header_format("date,exchange_rate");
     if (header_line != header_format)
     {
         throw InvalidHeaderFormatException();
@@ -110,7 +111,7 @@ void BitcoinExchange::convertToRecord(const std::string &filename)
     }
 
     // 3. 헤더 체크
-    std::string header_format("date | value");
+    const std::string header_format("date | value");
     if (header_line != header_format)
     {
         throw InvalidHeaderFormatException();

@@ -17,7 +17,6 @@ int main(int ac, char **av)
 {
     const std::string RED = "\033[31m";
     const std::string DEFAULT = "\033[39m";
-    int K = 3;
 
     if (ac < 2)
     {
@@ -27,9 +26,9 @@ int main(int ac, char **av)
 
     try
     {
-        PmergeMe p(K);
-        p.parse(ac, av);
-        p.sort();
+        PmergeMe inst;
+        inst.parse(ac, av);
+        inst.sort();
     }
     catch (const std::exception &e)
     {

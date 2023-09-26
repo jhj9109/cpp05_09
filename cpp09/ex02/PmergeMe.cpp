@@ -349,6 +349,6 @@ void PmergeMe::printDuration(clock_t start, clock_t end, size_t n, const char *d
     clock_t CLOCKS_PER_MILLI_SEC = 1000;
     std::cout << "Time to process a range of "
               << n << " elements with " << data << " : "
-              << (duration / CLOCKS_PER_MILLI_SEC) << "s " << (duration % CLOCKS_PER_MILLI_SEC) << "ms"
+              << (duration / CLOCKS_PER_MILLI_SEC) << "ms " << (duration % CLOCKS_PER_MILLI_SEC) << "us"
               << std::endl;
 }
